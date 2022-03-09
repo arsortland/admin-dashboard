@@ -57,11 +57,25 @@
 
 .topright{
     grid-area: topright;
+    font-weight: 600;
 }
 
 .hellomessage{
     grid-area: hellomessage;
+    display: flex;
 }
+
+.hithere{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.hithere > .adminname{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
 
 button{
     font-family: inherit;
@@ -130,6 +144,12 @@ img{
     margin: 1rem;
     border-left-color:  yellow;
     box-shadow: 1px 1px 1px 1px rgb(197, 101, 101);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas:
+    "cardtext cardtext"
+     ". cardicon";
 }
 
 .card:hover{
@@ -137,19 +157,29 @@ img{
     box-shadow: 2px 2px 2px 2px rgb(197, 101, 101);
 }
 
+.cardtext{
+    grid-area: cardtext;
+}
+.cardicon{
+    grid-area: cardicon;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 .announcements{
     border-radius: 5%;
     margin: 1rem;
     background-color: #fff1f2;
     grid-area: announcements;
     display: grid;
-    justify-content: space-around;
+    grid-template-rows: 1fr 1fr 1fr;
     box-shadow: 1px 1px 1px 1px rgb(197, 101, 101);
 }
 
 .message{
     border: 2px solid transparent;
-    border-bottom-color: grey
+    border-bottom-color: grey;
+    align-self:center;
 }
 
 .announcementtitle{
@@ -177,4 +207,12 @@ img{
 
 .trending .trendingtitle{
     background-color: #fda4af;
+}
+
+.topright > .cat1{
+    height: 3rem;
+}
+
+.hellomessage > img {
+    height: 7rem;
 }
