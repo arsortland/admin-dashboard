@@ -234,17 +234,20 @@ hr{
     background-color: #fda4af;
     grid-area: announcementtitle;
     font-weight: 600;
+    font-size: 1.3rem;
     margin: 1rem;
 }
 .trendingtitle{
     grid-area: trendingtitle;
     font-weight: 600;
+    font-size: 1.3rem;
     margin: 1rem;
 }
 .projecttitle{
     margin-bottom: -1rem;
     grid-area: projecttitle;
     font-weight: 600;
+    font-size: 1.3rem;
     margin: 1rem;
 }
 
@@ -289,3 +292,61 @@ hr{
     font-size: 1.2rem;
     margin-bottom: 0.3rem;
 }
+
+
+@media only screen and (max-width:1000px) {
+
+    .container{
+        height: 100vh;
+        font-family: 'Lato', sans-serif;
+        font-family: 'Roboto', sans-serif;
+        background-color: #9f1239;
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        grid-template-rows: 1fr 6fr;
+        grid-template-areas:
+        "dashboard header"
+        "dashboard content";
+    }
+
+    .content{
+        background-color: #fda4af;
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px 3fr 20px 1fr 20px 1fr;
+        grid-template-areas:
+        "projecttitle"
+        "projects"
+        "announcementtitle"
+        "announcements"
+        "trendingtitle"
+        "trending";
+    }
+
+    .dashboard{
+        background-color: #9f1239;
+        grid-area: dashboard;
+        display: grid;
+        align-items: center;
+        height: 30%;
+        margin-top: 5rem;
+    }
+
+    .dashtitle{
+        font-size: 1.3rem;
+    }
+
+    .dashboard > a {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dashboard > a > img{
+        height: 0;
+    }
+}
+
+
+
+
